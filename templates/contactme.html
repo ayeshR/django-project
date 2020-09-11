@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "header.html"%}
+{% block body_block %}
+
+    <form action="{% url 'information:contactme'%}" method="post">
+        
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+
+        </form>
+</div>
+{% endblock %}

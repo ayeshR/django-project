@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+  <title>ALL MEDICINE ENQUIRY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'style.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="icon" href="{% static 'AME.jpg'%}" type="image/gif" sizes="16x16">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar blue darken-4">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle blue darken-3" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar white"></span>
+        <span class="icon-bar white"></span>
+        <span class="icon-bar white"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse blue darken-4" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{% url 'information:index'%}">HOME</a></li>
+        <li><a href="{% url 'information:latestpost'%}">LATEST POST</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle " data-toggle="dropdown" href="#">ALL POST<span class="caret "></span></a>
+          <ul class="dropdown-menu blue darken-3">
+            <li><a href="{% url 'information:page1'%}">Page 1</a></li>
+            <li><a href="{% url 'information:page2'%}">Page 2</a></li>
+            <li><a href="{% url 'information:page3'%}">Page 3</a></li>
+            <li><a href="{% url 'information:page4'%}">Page 4</a></li>
+            <li><a href="{% url 'information:page5'%}">Page 5</a></li>
+            <li><a href="{% url 'information:page6'%}">Page 6</a></li>
+          </ul>
+        </li>
+       <li><a href="{% url 'information:aboutme'%}">ABOUT ME</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="btn-floating btn-large pulse link green" href="https://api.whatsapp.com/send?phone=+918789416368&text=ALL MEDICINE ENQUIRY" target="_blank"><i class="fa fa-whatsapp"></i> </a></li>
+        <li><a class="btn-floating btn-large pulse link white"href="https://www.instagram.com/AllMedicineEnquiry/" target="_blank"><i class="fa fa-instagram"></i> </a></li>
+        <li><a class="btn-floating btn-large pulse link red"href="https://www.youtube.com/channel/UCR9uVxme2JYFIfest1PY1qA/featured" target="_blank"><i class="fa fa-youtube"></i> </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+{% block body_block %}
+{% endblock %}
+</div>
+
+ <footer class="page-footer foot white">
+                <div class="container">
+                  <div class="row">
+                    <div class="col l6 s12">
+                      <h5 class="red-text text-darken-4">ALL MEDICINE ENQUIRY</h5>
+                      <p class="red-text text-darken-4">Thanks for watching and loving ALL MEDICINE ENQUIRY</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                      <h5 class="pink-text text-darken-4">Join me on</h5>
+                      <ul>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCR9uVxme2JYFIfest1PY1qA/featured"target="_blank"><span class="white-text text-darken-2"><i class="fa fa-youtube"></i> </span></a> &nbsp; &nbsp;
+                    <a href="https://www.instagram.com/AllMedicineEnquiry/"target="_blank"><span class="white-text text-darken-2"><i class="fa fa-instagram"></i> </span></a> &nbsp; &nbsp;
+                    <a href="https://api.whatsapp.com/send?phone=+918789416368&text=ALL MEDICINE ENQUIRY" target="_blank"><span class="white-text text-darken-2"><i class="fa fa-whatsapp"></i> </span></a>
+                </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <div class="footer-copyright">
+                  <div class="container">
+                  © 2020 Copyright 
+                  <a class="grey-text text-lighten-4 right" href="#!">AllMedicineEnquiry</a>
+                  </div>
+                </div>
+              </footer>
+     
+</body>
+</html>
